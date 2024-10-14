@@ -1,0 +1,50 @@
+.sidebar-Dark{
+    color: #202020;
+    background: rgb(255,255,255);
+}
+.logoContent-h2Close{
+    display: none;
+}
+
+.logoContent-imgClose{
+    max-width: 100%;
+    height: auto;
+    color: var(--color--blue);
+    transform: scale(2.5);
+}
+.sidebarButtonClose{
+    position: absolute;
+    top: 90vh;
+    left: 35%;
+    width: 32px;
+    height: 32px;
+    border-radius: 30%;
+    background-color: rgb(255,255,255);;
+    transition: all 0.3s;
+    transform: rotate(180deg);
+    border: none;
+}
+.sidebarButtonClose:hover{
+    background-color: rgb(145, 181, 235);
+    transition: all 0.3s;
+    
+}
+.linkIconClose{
+    padding: 8px 16px;
+    font-size: 25px;
+    margin: auto;
+    transform: scale(1.1);
+    transition: all 0.3s;
+    
+}
+
+
+.linkLabelClose{
+    display: none;
+}
+.linkContainer-spanClose{
+    color: var(--color--gray);
+    font-size: 13px;
+    font-weight: 500;
+    
+}
