@@ -42,10 +42,16 @@ export function Sidebar({ setTema, temas, sidebarOpen, setSidebarOpen }) {
                     <Sidebarlink direccion="/" nombre="Dashboard" nombreIcon="dashboard" sidebarOpen={sidebarOpen} />
                 </Row>
                 <Row>
-                    <Sidebarlink direccion="samsung" nombre="Pantalla" nombreIcon="pantalla" sidebarOpen={sidebarOpen} />
+                    <span className={sidebarOpen ? 'linkContainer-spanOpen' : 'linkContainer-spanClose text-center'}>Servicios:</span>
+                </Row>
+                <Row>
+                    <Sidebarlink direccion="ventas" nombre="Ventas" nombreIcon="ventas" sidebarOpen={sidebarOpen} />
+                </Row>
+                <Row>
+                    <Sidebarlink direccion="samsung" nombre="Inventario" nombreIcon="pantalla" sidebarOpen={sidebarOpen} />
                 </Row>
                 <Row className="pantallaMarca">
-
+                    
                 </Row>
             </Container>
             <div className="divider">

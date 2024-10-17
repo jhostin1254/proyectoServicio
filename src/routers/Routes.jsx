@@ -3,14 +3,18 @@ import {Samsung} from "../pages/Samsung"
 import { Dashboard } from "../pages/dashboard"
 import { Configuracion } from "../pages/Configuracion"
 import { Salir } from "../pages/Salir"
+import {Ventas} from "../pages/Ventas"
 
 
 export function MyRoutes(){
     return(
         <>
-                <Routes>a
+                <Routes>
                     <Route path="/" element = {
                         <Dashboard />
+                    }/>
+                     <Route path="/ventas" element = {
+                        <Ventas/>
                     }/>
                     <Route path="/samsung" element = {
                         <Samsung />

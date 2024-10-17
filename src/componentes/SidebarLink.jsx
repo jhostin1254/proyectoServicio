@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { IoIosPhonePortrait } from "react-icons/io";
-import { AiTwotoneDashboard } from "react-icons/ai";
 import { BsRadioactive, BsGear, BsPower } from "react-icons/bs";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { TbCashRegister } from "react-icons/tb";
+import { IoArchiveOutline } from "react-icons/io5";
 
 
 export function Sidebarlink({ direccion, nombre, nombreIcon, sidebarOpen }) {
@@ -11,7 +12,7 @@ export function Sidebarlink({ direccion, nombre, nombreIcon, sidebarOpen }) {
 
     return (
         //si el navlink esta activo le agregamos active
-        <NavLink to={direccion} className={({ isActive }) => `linkSidebar${isActive ? ` active` : ``}`}>
+        <NavLink to={direccion} className={({ isActive }) => `linkSidebar${isActive ? ` active` : ` `}`}>
             <div className={linkIconState}>
                 <LinkIcon nombreIcon={nombreIcon} />
             </div>
@@ -25,13 +26,15 @@ export function Sidebarlink({ direccion, nombre, nombreIcon, sidebarOpen }) {
 const LinkIcon = ({ nombreIcon }) => {
     switch (nombreIcon) {
         case 'pantalla':
-            return <IoIosPhonePortrait/>;
+            return <IoArchiveOutline />
         case 'dashboard':
-            return <AiTwotoneDashboard />;
+            return <LuLayoutDashboard />;
         case 'configuracion':
             return <BsGear />;
         case 'salir':
             return <BsPower />;
+        case'ventas':
+            return <TbCashRegister />            ;
         default:
             return <BsRadioactive />;
     }
