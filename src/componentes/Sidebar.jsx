@@ -1,23 +1,16 @@
-import { Col, Container, Row } from "react-bootstrap"
-import Accordion from 'react-bootstrap/Accordion';
+import { Container, Row } from "react-bootstrap"
 import "../styles/sidebarOpen.css"
 import "../styles/sidebarClose.css"
 import { AiOutlineAndroid } from "react-icons/ai";
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { Sidebarlink } from "./sidebarLink";
+import { SlArrowLeft } from "react-icons/sl";
+import { Sidebarlink, SidebarlinkCollapse } from "./sidebarLink";
 
 export function Sidebar({ setTema, temas, sidebarOpen, setSidebarOpen }) {
 
-
-    const ThemeStyle = temas ? 'sidebar-Light' : 'sidebar-Dark'
     const h2State = sidebarOpen ? 'logoContent-h2Open' : 'logoContent-h2Close'
     const imgState = sidebarOpen ? 'logoContent-imgOpen' : 'logoContent-imgClose'
     const sidebarState = sidebarOpen ? 'sidebarButtonOpen' : 'sidebarButtonClose'
 
-
-    const cambiarTema = () => {
-        setTema(!temas)
-    }
     const clickButtomSideBar = () => {
         setSidebarOpen(!sidebarOpen)
     }
@@ -28,12 +21,6 @@ export function Sidebar({ setTema, temas, sidebarOpen, setSidebarOpen }) {
                 <AiOutlineAndroid className={imgState} />
                 <h2 className={h2State}>JUDICELL</h2>
             </section>
-            <button onClick={clickButtomSideBar} className={sidebarState}>
-                <SlArrowLeft />
-            </button>
-            <div className="divider">
-
-            </div>
             <Container className="linkContainer">
                 <Row>
                     <span className={sidebarOpen ? 'linkContainer-spanOpen' : 'linkContainer-spanClose text-center'}>Menu</span>
@@ -41,6 +28,7 @@ export function Sidebar({ setTema, temas, sidebarOpen, setSidebarOpen }) {
                 <Row>
                     <Sidebarlink direccion="/" nombre="Dashboard" nombreIcon="dashboard" sidebarOpen={sidebarOpen} />
                 </Row>
+
                 <Row>
                     <span className={sidebarOpen ? 'linkContainer-spanOpen' : 'linkContainer-spanClose text-center'}>Servicios:</span>
                 </Row>
@@ -48,31 +36,31 @@ export function Sidebar({ setTema, temas, sidebarOpen, setSidebarOpen }) {
                     <Sidebarlink direccion="ventas" nombre="Ventas" nombreIcon="ventas" sidebarOpen={sidebarOpen} />
                 </Row>
                 <Row>
-                    <Sidebarlink direccion="samsung" nombre="Inventario" nombreIcon="pantalla" sidebarOpen={sidebarOpen} />
+                    <SidebarlinkCollapse direccion="samsung" nombre="Inventario" nombreIcon="pantalla" sidebarOpen={sidebarOpen} />
                 </Row>
-                <Row className="pantallaMarca">
-                    
-                </Row>
+
             </Container>
-            <div className="divider">
-                <hr />
-            </div>
             <Container className="linkContainer">
+                <div className="divider">
+                    <hr />
+                </div>
                 <Row>
                     <Sidebarlink direccion="configuracion" nombre="Configuracion" nombreIcon="configuracion" sidebarOpen={sidebarOpen} />
                 </Row>
                 <Row>
                     <Sidebarlink direccion="salir" nombre="Salir" nombreIcon="salir" sidebarOpen={sidebarOpen} />
                 </Row>
+
             </Container>
-            <div className="divider">
-                <hr />
-            </div>
-
-
-            {
-                /*
-                <Container>
+            <Container className="sidebarButtonContainer">
+                <Row>
+                    <button onClick={clickButtomSideBar} className={sidebarState}>
+                        <SlArrowLeft />
+                    </button>
+                </Row>
+            </Container>
+            {/*
+            <Container>
                 <div className="ThemeContent">
                     <div className="ToggleContent">
                         <div className="grid theme-container">
@@ -88,8 +76,8 @@ export function Sidebar({ setTema, temas, sidebarOpen, setSidebarOpen }) {
                         </div>
                     </div>
                 </div>
-                </Container>
-                */
+            </Container>
+            */
             }
         </div>
     )

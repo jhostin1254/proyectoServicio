@@ -1,13 +1,15 @@
-.sidebarContainer{
+.sidebarContainer {
     color: #202020;
-    background: rgb(255,255,255);
+    background: rgb(255, 255, 255);
     position: sticky;
 }
-.sidebar-Light{
+
+.sidebar-Light {
     color: #00ff2a;
-    background: rgb(255,255,255);
+    background: rgb(255, 255, 255);
 }
-.logoContent{
+
+.logoContent {
     display: flex;
     justify-content: center;
     align-items: start;
@@ -16,22 +18,31 @@
     cursor: pointer;
     padding-top: 15px;
 }
-.logoContent-h2Open{
+
+.logoContent-h2Open {
     display: block;
     color: var(--color--blue);
 }
-.logoContent-imgOpen{
+
+.logoContent-imgOpen {
     max-width: 100%;
     height: auto;
     color: var(--color--blue);
     font-size: 32px;
     transition: all 0.3s;
     transform: scale(1);
-    
+
 }
-.sidebarButtonOpen{
+
+.sidebarButtonContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.sidebarButtonOpen {
     position: absolute;
-    top: 80vh;
+    top: 10vh;
     width: 55px;
     height: 55px;
     left: 122px;
@@ -40,70 +51,117 @@
     color: var(--color--purpleIntense);
     transition: all 0.3s;
     border: none;
-    
+
 }
-.sidebarButtonOpen:hover{
+
+.sidebarButtonOpen:hover {
     background-color: var(--color--purple);
     color: var(--color--purpleIntense);
     transition: all 0.3s;
 }
-.linkContainer{
+
+.linkContainer {
     margin: 8px 0px;
     padding: 0 15%;
+    
 }
-.linkContainer-spanOpen{
+
+.linkContainer-spanOpen {
     color: var(--color--gray);
     font-size: 13px;
     font-weight: 500;
     padding: 0;
 }
-.linkSidebar{
+
+.linkSidebar {
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 6px 0;
     color: var(--color--gray);
+    cursor: pointer;
 }
-.linkIconOpen{
-    padding: 8px 6px 16px ;
+
+.linkIconOpen {
+    padding: 8px 6px 16px;
     font-size: 20px;
 }
-.linkLabelOpen{
+
+.linkLabelOpen {
     font-size: 18px;
+
 }
-.linkSidebar:hover{
+
+.linkSidebar:hover {
     color: var(--color--purple);
     transition: all 0.3s;
 
 }
-.active{
+
+.active {
     position: relative;
     color: var(--color--purpleIntense);
+
 }
-.active::after{
+
+.active::after {
     content: "";
     position: absolute;
     right: 0;
-    top: 12px;
-    width: 4px; 
-    height: 47px; 
-    background-color: var(--color--purpleIntense); 
+    top: 5px;
+    width: 4px;
+    height: 25px;
+    background-color: var(--color--purpleIntense);
+}
+
+.activeState {
+    position: relative;
+    color: var(--color--purpleIntense);
+
+}
+
+.actives {
+    position: relative;
+    color: var(--color--purpleIntense);
+
+}
+
+.actives::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 13px;
+    width: 4px;
+    height: 40px;
+    background-color: var(--color--purpleIntense);
+}
+
+.sidebarCollapseOpen {
+    background-color: var(--color--purpleweak);
+    border-radius: 5%;
+}
+
+.spanSideabarCollapse {
+    color: var(--color--gray);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px;
 }
 
 
-
-
-.divider{
-    height: 1px;
+.divider {
+    height: 0.2rem;
     width: 100%;
     margin: 24px 0;
     color: var(--color--purple)
 }
-.ThemeContent{
+
+.ThemeContent {
     display: flex;
     justify-content: center;
 }
-.ToggleContent{
+
+.ToggleContent {
     display: block;
     font-weight: 700;
     border-radius: 10px;
@@ -111,11 +169,13 @@
     position: relative;
 
 }
-.theme-container{
+
+.theme-container {
     background-blend-mode: multiply, multiply;
     transition: 0.4s;
 }
-.theme-container .grid{
+
+.theme-container .grid {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -123,26 +183,31 @@
     width: 100vw;
     font-family: sans-serif;
 }
-.demo{
+
+.demo {
     font-size: 32px;
 }
-.switch{
+
+.switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
 }
-.theme-swither{
+
+.theme-swither {
     opacity: 0;
     width: 0;
     height: 0;
 }
-.theme-swither:checked +.slider::before{
+
+.theme-swither:checked+.slider::before {
     left: 4px;
     content: "🌚";
     transform: translateX(26px);
 }
-.slider{
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -151,7 +216,8 @@
     bottom: 0;
     background-color: #ebd724;
 }
-.slider::before{
+
+.slider::before {
     position: absolute;
     content: " 🌝 ";
     height: 0;
@@ -161,12 +227,15 @@
     line-height: 0px;
     transition: 0.4s;
 }
-.slider.round{
+
+.slider.round {
     border-radius: 34px;
 }
-.slider.round::before{
+
+.slider.round::before {
     border-radius: 50%;
 }
-.slider.round.dark{
+
+.slider.round.dark {
     background-color: #000000;
 }

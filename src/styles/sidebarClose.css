@@ -14,16 +14,17 @@
 }
 .sidebarButtonClose{
     position: absolute;
-    top: 80vh;
-    left: 35%;
+    top: 13vh;
     width: 55px;
     height: 55px;
+    left: 20px;
     border-radius: 30%;
-    transform: rotate(180deg);
     background-color: var(--color--purpleweak);
     color: var(--color--purpleIntense);
     transition: all 0.3s;
     border: none;
+    transform: rotate(180deg);
+
 }
 .sidebarButtonClose:hover{
     background-color: var(--color--purple);
