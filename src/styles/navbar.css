@@ -1,0 +1,34 @@
+.navbarContent{
+    height: 4rem;
+    background-color: white !important;
+    border-bottom: solid rgba(0, 0, 0, 0.1)  0.5px;
+    margin: 0px;
+   
+}
+.navbarContent-Logo{
+    padding: 0.9rem 0 0 3rem;
+}
+.logoContent {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 24px;
+    transition: all 0.3s;
+    cursor: pointer;
+    padding-top: 15px;
+}
+
+.logoContent-h2Open {
+    display: block;
+    color: var(--color--blue);
+}
+
+.logoContent-imgOpen {
+    max-width: 100%;
+    height: auto;
+    color: var(--color--blue);
+    font-size: 32px;
+    transition: all 0.3s;
+    transform: scale(1);
+
+}

@@ -17,10 +17,6 @@ export function Sidebar({ setTema, temas, sidebarOpen, setSidebarOpen }) {
 
     return (
         <div className="sidebarContainer">
-            <section className="logoContent">
-                <AiOutlineAndroid className={imgState} />
-                <h2 className={h2State}>JUDICELL</h2>
-            </section>
             <Container className="linkContainer">
                 <Row>
                     <span className={sidebarOpen ? 'linkContainer-spanOpen' : 'linkContainer-spanClose text-center'}>Menu</span>

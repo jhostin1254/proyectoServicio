@@ -1,7 +1,9 @@
 .sidebarContainer {
     color: #202020;
-    background: rgb(255, 255, 255);
+    background-color: white !important;
+    border-right: solid rgba(0, 0, 0, 0.1)  0.5px;
     position: sticky;
+
 }
 
 .sidebar-Light {

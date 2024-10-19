@@ -16,12 +16,12 @@ export function App() {
         <>
             <BrowserRouter>
                 <div>
-                    
+                    <SideNavbar/>
                     <main className={sidebarOpen ? 'sidebarBig' : 'sidebarLittle'}>
                         <Sidebar setTema={setTema} temas={tema} sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-
                         <MyRoutes />
                     </main>
+                    
                 </div>
             </BrowserRouter>
 

@@ -4,6 +4,7 @@
   --color--purple:rgba(154,121,225,255);
   --color--gray:rgba(139,145,165,255);
   --color--blue: #4ca7fa;
+  --color--blueWeak: #f4f6fa;
   --color--purpleIntense:rgba(127,86,217,255);
   --color--purpleweak:rgba(239,235,249,255)
 }
@@ -26,6 +27,7 @@
   
 }
 main{
-  height: 100vh;
+  height: 85vh;
   transition: all 0.5s;
+  background-color: var(--color--blueWeak);
 }
