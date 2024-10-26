@@ -1,29 +1,33 @@
 import { BrowserRouter } from 'react-router-dom'
 import { MyRoutes } from './routers/Routes'
 import { Sidebar } from './componentes/Sidebar'
-import { useState } from 'react'
-import { SideNavbar } from './componentes/Navbar'
+import { createContext, useContext, useState } from 'react'
 import './index.css'
 
-export function App() {
-    //para cambiar tema
-    const [tema, setTema] = useState(true)
+const sidebarStateContex = createContext();
 
-    //para cambiar de estilo al sidebar
+export function useSidebarStateContex(){
+   return useContext(sidebarStateContex);
+}
+
+export function App() {
+
     const [sidebarOpen, setSidebarOpen] = useState(true)
 
     return (
         <>
-            <BrowserRouter>
-                <div>
-                    
-                    <main className={sidebarOpen ? 'sidebarBig' : 'sidebarLittle'}>
-                        <Sidebar setTema={setTema} temas={tema} sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+            <sidebarStateContex.Provider value={{sidebarOpen, setSidebarOpen}}>
+                <BrowserRouter>
+                    <div>
+                        <main className={sidebarOpen ? 'sidebarBig' : 'sidebarLittle'}>
+                            <Sidebar />
+                            <MyRoutes />
+                        </main>
+                    </div>
+                </BrowserRouter>
 
-                        <MyRoutes />
-                    </main>
-                </div>
-            </BrowserRouter>
+            </sidebarStateContex.Provider>
+
 
         </>
     )

@@ -4,8 +4,10 @@ import { LuLayoutDashboard } from "react-icons/lu";
 import { TbCashRegister } from "react-icons/tb";
 import { IoArchiveOutline } from "react-icons/io5";
 import { useState } from 'react';
-import { Row, Col } from "react-bootstrap";
+import { Row} from "react-bootstrap";
 import Collapse from 'react-bootstrap/Collapse';
+import { useSidebarStateContex } from "../App";
+
 
 const LinkIcon = ({ nombreIcon }) => {
     switch (nombreIcon) {
@@ -24,9 +26,10 @@ const LinkIcon = ({ nombreIcon }) => {
     }
 };
 
-export function Sidebarlink({ direccion, nombre, nombreIcon, sidebarOpen }) {
+export function Sidebarlink({ direccion, nombre, nombreIcon}) {
 
-    const [open, setOpen] = useState(false);
+    const sidebarOpen = useSidebarStateContex().sidebarOpen;
+
     const linkLabelState = sidebarOpen ? 'linkLabelOpen' : 'linkLabelClose'
     const linkIconState = sidebarOpen ? 'linkIconOpen' : 'linkIconClose'
 
@@ -43,7 +46,9 @@ export function Sidebarlink({ direccion, nombre, nombreIcon, sidebarOpen }) {
     )
 }
 
-export function SidebarlinkCollapse({ direccion, nombre, nombreIcon, sidebarOpen }) {
+export function SidebarlinkCollapse({nombre, nombreIcon }) {
+
+    const sidebarOpen = useSidebarStateContex().sidebarOpen;
 
     const [open, setOpen] = useState(false);
     const linkLabelState = sidebarOpen ? 'linkLabelOpen' : 'linkLabelClose'
