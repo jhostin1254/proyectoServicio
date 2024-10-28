@@ -12,7 +12,6 @@ export function SideNavbar() {
                 <section className="logoContent">
                     <AiOutlineAndroid className='logoContent-imgOpen' />
                 <h2 className='logoContent-h2Open'>SERVICELL</h2>
-                
                 </section>
                 </Navbar.Brand>
                 
