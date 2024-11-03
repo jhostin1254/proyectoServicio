@@ -5,7 +5,6 @@ import { Sidebarlink} from "./sidebarLink";
 import { SidebarlinkCollapse } from "./sidebarCollapse";
 import { useSidebarStateContex } from "../App";
 import "../styles/sidebarOpen.css"
-import "../styles/sidebarClose.css"
 
 export function Sidebar() {
     

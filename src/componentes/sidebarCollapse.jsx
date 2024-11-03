@@ -3,16 +3,17 @@ import { useState } from 'react';
 import { Row } from "react-bootstrap";
 import Collapse from 'react-bootstrap/Collapse';
 import { useSidebarStateContex } from "../App";
-import { LinkIcon } from "../services/Icon";
+import { LinkIcon } from "../assets/Icon";
 
 export function SidebarlinkCollapse({ nombre, nombreIcon }) {
 
     const sidebarOpen = useSidebarStateContex().sidebarOpen;
     const [open, setOpen] = useState(false);
     
+    
     return (
         <>
-            <div onClick={() => setOpen(!open)} className={`linkSidebar ${open ? ` activeState` : ` `}`}>
+            <div onClick={() => {setOpen(!open)}} className={`linkSidebar ${open ? ` activeState` : ` `}`}>
                 <div className={sidebarOpen ? 'linkIconOpen' : 'linkIconClose'}>
                     <LinkIcon nombreIcon={nombreIcon} />
                 </div>
@@ -20,8 +21,8 @@ export function SidebarlinkCollapse({ nombre, nombreIcon }) {
                     <span>{nombre}</span>
                 </div>
             </div>
-            <Collapse in={open}>
-                <div className="sidebarCollapseOpen">
+            <Collapse in={open} className={`${sidebarOpen? ``: `close`}`}>
+                <div className={sidebarOpen ? 'sidebarCollapseOpen': 'sidebarCollapseClose'}>
                     <Row>
                         <span className='spanSideabarCollapse'>Marcas:</span>
                     </Row>

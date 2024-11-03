@@ -27,7 +27,7 @@
   
 }
 main{
-  height: 85vh;
+  min-height: 100vh;
   transition: all 0.5s;
   background-color: var(--color--blueWeak);
 }

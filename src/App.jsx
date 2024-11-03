@@ -3,7 +3,6 @@ import { MyRoutes } from './routers/Routes'
 import { Sidebar } from './componentes/Sidebar'
 import { createContext, useContext, useState } from 'react'
 import './index.css'
-import { Navbar } from 'react-bootstrap'
 
 const sidebarStateContex = createContext();
 

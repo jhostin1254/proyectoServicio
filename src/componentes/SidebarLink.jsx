@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useSidebarStateContex } from "../App";
-import { LinkIcon } from "../services/Icon";
+import { LinkIcon } from "../assets/Icon";
 
 export function Sidebarlink({ direccion, nombre, nombreIcon }) {
 

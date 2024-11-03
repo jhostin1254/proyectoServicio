@@ -1,9 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import {Routes, Route } from "react-router-dom"
 import {Samsung} from "../pages/inventarioPages/Samsung"
 import { Huawey } from "../pages/inventarioPages/Huawei"
 import {Oppo} from "../pages/inventarioPages/Oppo"
 import {Xiaomi} from "../pages/inventarioPages/Xiaomi"
-
 import { Dashboard } from "../pages/dashboard"
 import { Configuracion } from "../pages/Configuracion"
 import { Salir } from "../pages/Salir"

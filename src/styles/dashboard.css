@@ -1,0 +1,17 @@
+.containerDashboard{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 2rem;
+}
+    .dashboardGrid{
+        border: solid 10px black;
+        
+    }
+
+    .div1 { grid-area: 1 / 1 / 5 / 5; }
+    .div2 { grid-area: 1 / 5 / 5 / 9; }
+    .div3 { grid-area: 1 / 9 / 5 / 13; }
+    .div4 { grid-area: 5 / 1 / 11 / 10; }
+    .div5 { grid-area: 5 / 10 / 11 / 13; }
