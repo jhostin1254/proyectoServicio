@@ -1,6 +1,7 @@
 import { Container, Row } from "react-bootstrap"
 import { AiOutlineAndroid } from "react-icons/ai";
 import { SlArrowLeft } from "react-icons/sl";
+<<<<<<< HEAD
 import { Sidebarlink} from "./sidebarLink";
 import { SidebarlinkCollapse } from "./sidebarCollapse";
 import { useSidebarStateContex } from "../App";
@@ -9,7 +10,17 @@ import "../styles/sidebarOpen.css"
 export function Sidebar() {
     
     const {sidebarOpen,setSidebarOpen} = useSidebarStateContex();
+=======
+import { Sidebarlink, SidebarlinkCollapse } from "./sidebarLink";
+import { useSidebarStateContex } from "../App";
 
+
+>>>>>>> eed88539a49d9e7df706cbcaa214386498c92557
+
+export function Sidebar() {
+
+    const {sidebarOpen,setSidebarOpen} = useSidebarStateContex();
+    
     const clickButtomSideBar = () => {
         setSidebarOpen(!sidebarOpen)
     }

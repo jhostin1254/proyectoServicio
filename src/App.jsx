@@ -17,7 +17,11 @@ export function App() {
 
     return (
         <>
+<<<<<<< HEAD
            <sidebarStateContex.Provider value={{sidebarOpen, setSidebarOpen}}>
+=======
+            <sidebarStateContex.Provider value={{sidebarOpen, setSidebarOpen}}>
+>>>>>>> eed88539a49d9e7df706cbcaa214386498c92557
                 <BrowserRouter>
                     <div>
                         <main className={sidebarOpen ? 'sidebarBig' : 'sidebarLittle'}>
