@@ -31,3 +31,6 @@ main{
   transition: all 0.5s;
   background-color: var(--color--blueWeak);
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

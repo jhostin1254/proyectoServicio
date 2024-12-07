@@ -1,291 +1,275 @@
 .sidebarContainer {
-    color: #202020;
-    background-color: white !important;
-    border-right: solid rgba(0, 0, 0, 0.1)  0.5px;
-    position: sticky;
-
+  color: #202020;
+  background-color: white !important;
+  border-right: solid rgba(0, 0, 0, 0.1) 0.5px;
+  position: sticky;
 }
 
 .sidebar-Light {
-    color: #00ff2a;
-    background: rgb(255, 255, 255);
+  color: #00ff2a;
+  background: rgb(255, 255, 255);
 }
 
 .logoContent {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    padding-bottom: 24px;
-    transition: all 0.3s;
-    cursor: pointer;
-    padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-bottom: 24px;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding-top: 15px;
 }
 
 .logoContent-h2Open {
-    display: block;
-    color: var(--color--blue);
+  display: block;
+  font-size: 1.8rem;
+  color: var(--color--blue);
 }
 
 .logoContent-imgOpen {
-    max-width: 100%;
-    height: auto;
-    color: var(--color--blue);
-    font-size: 32px;
-    transition: all 0.3s;
-    transform: scale(1);
-
+  max-width: 100%;
+  height: auto;
+  color: var(--color--blue);
+  font-size: 32px;
+  transition: all 0.3s;
+  transform: scale(1);
 }
 
 .sidebarButtonContainer {
-    display: flex;
-    justify-content: center;
-    position: relative;
+  position: relative;
 }
 
 .sidebarButtonOpen {
-    position: absolute;
-    top: 10vh;
-    width: 55px;
-    height: 55px;
-    left: 122px;
-    border-radius: 30%;
-    background-color: var(--color--purpleweak);
-    color: var(--color--purpleIntense);
-    transition: all 0.3s;
-    border: none;
-
+  position: absolute;
+  top: 10vh;
+  width: 43px;
+  height: 43px;
+  left: 122px;
+  border-radius: 30%;
+  background-color: var(--color--purpleweak);
+  color: var(--color--purpleIntense);
+  transition: all 0.3s;
+  border: none;
 }
 
 .sidebarButtonOpen:hover {
-    background-color: var(--color--purple);
-    color: var(--color--purpleIntense);
-    transition: all 0.3s;
+  background-color: var(--color--purple);
+  color: var(--color--purpleIntense);
+  transition: all 0.3s;
 }
 
 .linkContainer {
-    margin: 8px 0px;
-    padding: 0 15%;
-    
+  margin: 8px 0px;
+  padding: 0 15%;
 }
 
 .linkContainer-spanOpen {
-    color: var(--color--gray);
-    font-size: 13px;
-    font-weight: 500;
-    padding: 0;
+  color: var(--color--gray);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0;
 }
 
 .linkSidebar {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 6px 0;
-    color: var(--color--gray);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 6px 0;
+  color: var(--color--gray);
+  cursor: pointer;
 }
-.close{
-    display: none;
+.close {
+  display: none;
 }
 
 .linkIconOpen {
-    padding: 8px 6px 16px;
-    font-size: 20px;
+  padding: 8px 6px 16px;
+  font-size: 20px;
 }
 
 .linkLabelOpen {
-    font-size: 18px;
-
+  font-size: 18px;
 }
 
 .linkSidebar:hover {
-    color: var(--color--purple);
-    transition: all 0.3s;
-
+  color: var(--color--purple);
+  transition: all 0.3s;
 }
 
 .active {
-    position: relative;
-    color: var(--color--purpleIntense);
-
+  position: relative;
+  color: var(--color--purpleIntense);
 }
 
 .active::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 4px;
-    height: 25px;
-    background-color: var(--color--purpleIntense);
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 4px;
+  height: 25px;
+  background-color: var(--color--purpleIntense);
 }
 
 .activeState {
-    position: relative;
-    color: var(--color--purpleIntense);
-
+  position: relative;
+  color: var(--color--purpleIntense);
 }
 
 .actives {
-    position: relative;
-    color: var(--color--purpleIntense);
-
+  position: relative;
+  color: var(--color--purpleIntense);
 }
 
 .actives::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 13px;
-    width: 4px;
-    height: 40px;
-    background-color: var(--color--purpleIntense);
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 9px;
+  width: 4px;
+  height: 38px;
+  background-color: var(--color--purpleIntense);
 }
 
 .sidebarCollapseOpen {
-    background-color: var(--color--purpleweak);
-    border-radius: 5%;
+  background-color: var(--color--purpleweak);
+  border-radius: 5%;
 }
 
 .spanSideabarCollapse {
-    color: var(--color--gray);
-    font-size: 13px;
-    font-weight: 500;
-    padding: 10px;
+  color: var(--color--gray);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px;
 }
 
-
 .divider {
-    height: 0.2rem;
-    width: 100%;
-    margin: 24px 0;
-    color: var(--color--purple)
+  height: 0.2rem;
+  width: 100%;
+  margin: 24px 0;
+  color: var(--color--purple);
 }
 
 .ThemeContent {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .ToggleContent {
-    display: block;
-    font-weight: 700;
-    border-radius: 10px;
-    translate: all 0.3s;
-    position: relative;
-
+  display: block;
+  font-weight: 700;
+  border-radius: 10px;
+  translate: all 0.3s;
+  position: relative;
 }
 
 .theme-container {
-    background-blend-mode: multiply, multiply;
-    transition: 0.4s;
+  background-blend-mode: multiply, multiply;
+  transition: 0.4s;
 }
 
 .theme-container .grid {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    font-family: sans-serif;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
 }
 
 .demo {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
 .theme-swither {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.theme-swither:checked+.slider::before {
-    left: 4px;
-    content: "🌚";
-    transform: translateX(26px);
+.theme-swither:checked + .slider::before {
+  left: 4px;
+  content: "🌚";
+  transform: translateX(26px);
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ebd724;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ebd724;
 }
 
 .slider::before {
-    position: absolute;
-    content: " 🌝 ";
-    height: 0;
-    width: 0;
-    left: -10px;
-    top: 16px;
-    line-height: 0px;
-    transition: 0.4s;
+  position: absolute;
+  content: " 🌝 ";
+  height: 0;
+  width: 0;
+  left: -10px;
+  top: 16px;
+  line-height: 0px;
+  transition: 0.4s;
 }
 
 .slider.round {
-    border-radius: 34px;
+  border-radius: 34px;
 }
 
 .slider.round::before {
-    border-radius: 50%;
+  border-radius: 50%;
 }
-.logoContent-h2Close{
-    display: none;
-}
-
-.logoContent-imgClose{
-    max-width: 100%;
-    height: auto;
-    color: var(--color--blue);
-    transform: scale(2.5);
-}
-.sidebarButtonClose{
-    position: absolute;
-    top: 6vh;
-    width: 55px;
-    height: 55px;
-    left: 17px;
-    border-radius: 30%;
-    background-color: var(--color--purpleweak);
-    color: var(--color--purpleIntense);
-    transition: all 0.3s;
-    border: none;
-    transform: rotate(180deg);
-
-}
-.sidebarButtonClose:hover{
-    background-color: var(--color--purple);
-    color: var(--color--purpleIntense);
-    transition: all 0.3s;
+.logoContent-h2Close {
+  display: none;
 }
 
-.linkIconClose{
-    padding: 8px 16px;
-    font-size: 25px;
-    margin: auto;
-    transform: scale(1.1);
-    transition: all 0.3s;
-    
+.logoContent-imgClose {
+  max-width: 100%;
+  height: auto;
+  color: var(--color--blue);
+  transform: scale(2.5);
+}
+.sidebarButtonClose {
+  position: absolute;
+  top: 6vh;
+  width: 43px;
+  height: 43px;
+  left: 22px;
+  border-radius: 30%;
+  background-color: var(--color--purpleweak);
+  color: var(--color--purpleIntense);
+  transition: all 0.3s;
+  border: none;
+  transform: rotate(180deg);
+}
+.sidebarButtonClose:hover {
+  background-color: var(--color--purple);
+  color: var(--color--purpleIntense);
+  transition: all 0.3s;
 }
 
-
-.linkLabelClose{
-    display: none;
+.linkIconClose {
+  padding: 8px 16px;
+  font-size: 25px;
+  margin: auto;
+  transform: scale(1.1);
+  transition: all 0.3s;
 }
-.linkContainer-spanClose{
-    color: var(--color--gray);
-    font-size: 13px;
-    font-weight: 500;
-    
+
+.linkLabelClose {
+  display: none;
+}
+.linkContainer-spanClose {
+  color: var(--color--gray);
+  font-size: 13px;
+  font-weight: 500;
 }
